@@ -83,7 +83,7 @@ namespace WebApp.Controllers
             {
                 Token = token,
                 Message = "Login Successfull",
-                Timestamp = DateTime.UtcNow
+                Timestamp = DateTime.UtcNow 
             });
 
 
