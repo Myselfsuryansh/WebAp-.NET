@@ -76,7 +76,6 @@ namespace WebApp.Controllers.HospitalController
             }
         }
 
-
         [HttpGet("{id}")]
 
         public ActionResult<Patient> Get(Guid id)
@@ -111,7 +110,6 @@ namespace WebApp.Controllers.HospitalController
                 });
             }
         }
-
 
         [HttpPut("{id}")]
 
@@ -162,5 +160,7 @@ namespace WebApp.Controllers.HospitalController
                 });
             }
         }
+
+    
     }
 }
