@@ -161,6 +161,35 @@ namespace WebApp.Controllers.HospitalController
             }
         }
 
+        [HttpDelete("{id}")]
+
+        public ActionResult Delete(Guid id)
+        {
+            try
+            {
+                var patient = patientData.FirstOrDefault();
+                if(patient == null)
+                {
+                    return NotFound(new
+                    {
+                        Message = "Patient Not found with the Given Id"
+                    });
+
+                   
+
+                }
+                patientData.Remove(patient);
+                return Ok(new { Message = "Patient Data Removed Successfully" });
+            }
+            catch (FormatException)
+            {
+                return BadRequest(new
+                {
+                    Message = "Invalid Id Format, Please enter correct Id Format"
+                });
+            }
+        }
+
     
     }
 }
