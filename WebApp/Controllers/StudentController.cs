@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 using System.ComponentModel.DataAnnotations;
 using WebApp.Models;
 
@@ -7,6 +9,7 @@ namespace WebApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [SwaggerTag("Students")]
     public class StudentController : ControllerBase
     {
 

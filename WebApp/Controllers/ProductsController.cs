@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 using WebApp.Models;
 
 namespace WebApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [SwaggerTag("Product")]
     public class ProductsController : ControllerBase
     {
         private static List<Product> products = new List<Product>

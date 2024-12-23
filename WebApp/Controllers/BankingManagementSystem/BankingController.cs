@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 using WebApp.Services;
 
 namespace WebApp.Controllers.BankingManagementSystem
 {
     [Route("api/[controller]")]
     [ApiController]
+    [SwaggerTag("Banks")]
     public class BankingController : ControllerBase
     {
         private readonly BankService _bankingService;

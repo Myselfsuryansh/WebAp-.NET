@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 using WebApp.Models.HospitalData;
 
 namespace WebApp.Controllers.HospitalController
 {
     [Route("api/[controller]")]
     [ApiController]
+    [SwaggerTag("Doctor")]
     public class DoctorController : ControllerBase
     {
 
